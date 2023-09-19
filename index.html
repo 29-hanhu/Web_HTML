@@ -1,17 +1,62 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bài tập thực hành lập trình Web buổi 1 bài tập 1">
-    <meta name="keyword" content="Lập trình Web cơ bản">
-    <title> V BTS khiến fan cảm động nhờ hành động cực ấm áp với ba </title>
+    <title>Trang Web Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #left-side {
+            width: 30%;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        #right-side {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        #form {
+            line-height: 30px;
+            border: 2px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        #gmail-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-    <h1> V BTS khiến fan cảm động nhờ hành động cực ấm áp với ba </h1>
-    <h3> Thành viên cực kỳ nổi tiếng của BTS - V đã gây xúc động khi lần đầu kể về ba đầy tình cảm trong một chương trình truyền hình. </h3>
-    <p> Trong 7 thành viên của nhóm nhạc nam hàng đầu xứ Hàn BTS, V được biết đến là một người con rất gần gũi với ba. Mới đây, trong số mới nhất của chương trình You quiz on the Block, V lại một lần nữa khiến khán giả cảm động với chia sẻ về bố. </p>
-    <p> Với V, những khó khăn vất vả của ba đều gói gọn trong 500.000km đó. Nam rapper luôn nhắc nhở bản thân rằng "Mình phải là một người con ngoan" và cố gắng hết sức. Anh cũng thấy được cách ba luôn cố gắng trở thành một người cha tốt đối với cậu con trai nổi tiếng. </p>
-    <p> Vì vậy, V cho biết: “Mặc dù ba không yêu cầu em làm vậy, nhưng em luôn muốn giúp đỡ ba. Đó là điều đương nhiên vì ba chính là ước mơ của em." </p>
+    <div id="left-side">
+        <div id="form">
+            <h2>Đăng ký tài khoản</h2>
+            <form action="/process-registration" method="post">
+                <!-- Thêm các trường nhập liệu cho form Đăng ký tài khoản ở đây -->
+                <label for="username">Tên người dùng:</label>
+                <input type="text" id="username" name="username">
+                <br>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+                <br>
+                <label for="password">Mật khẩu:</label>
+                <input type="password" id="password" name="password">
+                <br>
+                <input type="submit" value="Đăng ký">
+            </form>
+        </div>
+    </div>
+    <div id="right-side">
+        <h2>Đăng nhập Gmail</h2>
+        <iframe id="gmail-iframe" src="https://mail.google.com"></iframe>
+    </div>
 </body>
 </html>
